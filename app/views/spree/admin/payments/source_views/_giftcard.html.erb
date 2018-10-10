@@ -2,12 +2,8 @@
   <legend><%= Spree.t(:gift_card) %></legend>
   <table class="table table-condensed table-bordered">
     <tr>
-      <th width="20%"><%= Spree.t(:gift_card_user) %>:</th>
-      <td><%= payment.source.name %></td>
-    </tr>
-    <tr>
-      <th><%= Spree.t(:email) %>:</th>
-      <td><%= payment.source.email %></td>
+      <th width="20%"><%= Spree.t(:gift_card_code) %>:</th>
+      <td><%= payment.source.code %></td>
     </tr>
   </table>
 </fieldset>

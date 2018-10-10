@@ -1,5 +1,6 @@
 Spree::LineItem.class_eval do
   has_one :gift_card, dependent: :destroy
+  accepts_nested_attributes_for :gift_card, allow_destroy: true
 
   Spree::LineItem::MAXIMUM_GIFT_CARD_LIMIT = 1
 
@@ -10,4 +11,6 @@ Spree::LineItem.class_eval do
 
   delegate :is_gift_card?, to: :product
 
+
+  private
 end
